@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity FA_3 is 
+    port(sw:in std_logic_vector(5 downto 0);
+        led:out std_logic_vector(3 downto 0);
+        seg:out std_logic_vector(0 to 7));--led(4)is carry of the MSB bit
+end FA_3;
+
+architecture FULL_ADD of FA_3 is
+signal bcd: std_logic_vector(3 downto 0);
+begin 
+ led<=('0'&sw(5 downto 3))+sw(2 downto 0);
+ bcd<=('0'&sw(5 downto 3))+sw(2 downto 0);
+ seg<="00000011" when bcd="0000" else
+      "10011111" when bcd="0001" else
+      "00100101" when bcd="0010" else
+      "00001101" when bcd="0011" else
+      "10011001" when bcd="0100" else
+      "01001001" when bcd="0101" else
+      "01000001" when bcd="0110" else
+      "00011111" when bcd="0111" else
+      "00000001" when bcd="1000" else
+      "00001001" when bcd="1001" else
+      "00010001" when bcd="1010" else
+      "11000001" when bcd="1011" else
+      "01100011" when bcd="1100" else
+      "10000101" when bcd="1101" else
+      "01100001" when bcd="1110" else
+      null ;
+
+end FULL_ADD;

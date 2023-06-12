@@ -1,0 +1,39 @@
+|num
+sw => seg2[2].DATAIN
+sw => seg2[5].DATAIN
+sw => seg2[7].DATAIN
+sw => seg1[1].DATAIN
+sw => seg1[2].DATAIN
+sw => seg1[5].DATAIN
+sw => seg1[6].DATAIN
+sw => seg0[0].DATAIN
+sw => seg0[1].DATAIN
+sw => seg0[2].DATAIN
+sw => seg0[5].DATAIN
+sw => seg0[6].DATAIN
+seg0[7] <= <VCC>
+seg0[6] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] <= <VCC>
+seg0[3] <= <VCC>
+seg0[2] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg0[1] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg0[0] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg1[7] <= <VCC>
+seg1[6] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= <VCC>
+seg1[3] <= <VCC>
+seg1[2] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg1[1] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg1[0] <= <VCC>
+seg2[7] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg2[6] <= <GND>
+seg2[5] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg2[4] <= <GND>
+seg2[3] <= <GND>
+seg2[2] <= sw.DB_MAX_OUTPUT_PORT_TYPE
+seg2[1] <= <GND>
+seg2[0] <= <GND>
+
+
